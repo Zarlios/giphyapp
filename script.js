@@ -1,7 +1,11 @@
 const gifContainerEl = document.querySelector('#gif-container');
+const searchboxEl = document.querySelector('#search-box');
+const searchButtonEl = document.querySelector("#search-button");
+
+console.log(searchboxEl)
 
 function getGifs() {
-    fetch('https://api.giphy.com/v1/gifs/trending?api_key=hiqCK9aIGMFJKgRC3J9ozEalkC9ohp53&limit=10&rating="g"')
+    fetch('https://api.giphy.com/v1/gifs/search?api_key=hiqCK9aIGMFJKgRC3J9ozEalkC9ohp53&limit=10&rating="g"&q="kittens"')
         .then((response) => response.json())
         .then(data => {
 
